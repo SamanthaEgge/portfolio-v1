@@ -1,0 +1,31 @@
+@import '../../styles/reset.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.home-container {
+    min-height: 100vh;
+
+    .home-nav {
+
+    }
+
+    .home-header{
+        min-width: 100vw;
+        display: flex;
+
+        .image-holder{
+          width: 49%;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .home-summary {
+          text-align: center;
+          width: 60%;
+          background-color: $primary-color;
+        }
+        
+    }
+}
