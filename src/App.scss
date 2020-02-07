@@ -1,5 +1,7 @@
 @import './styles/reset.scss';
+@import './styles/variables.scss';
 
 .portfolio-container {
   min-height: 100vh;
+  background-color: $dark-primary;
 }

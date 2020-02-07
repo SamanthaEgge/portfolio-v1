@@ -3,43 +3,56 @@ import React from 'react'
 import './Home.scss'
 import Navigation from '../Navigation/Navigation'
 import Footer from '../Footer/Footer'
+import Highlights from './Highlights.js'
 
 import longBGHome from '../../assets/longbghome.jpg'
 
-const Home = () => {
+class Home extends React.Component {
+  constructor(props) {
+    super(props)
 
-  return(
-    <div className='home-container'>
-      <>
-      <div className='home-nav'>
-        <Navigation /> 
-        {/* pass props to show home vs other pages,
-        or use history to change this */}
-      </div>
-      <div className='home-header'>
-        <div className='image-holder'> 
-          <img src={longBGHome} />
-        </div>
-        <div className='home-summary'>
-            <h3>Full Stack Web Developer looking to design applications to make your job easier</h3>
-        </div>
-      </div>
-      </>
+    this.state = {
 
-      <div className='personal-details'>
-        <div className='details-photo'>
-          <img src =''></img>
+    }
+  }
+
+  componentDidMount() {
+
+  }
+
+
+  render() {
+    return(
+      <div className='home-container'>
+        <>
+        <div className='home-nav'>
+          <Navigation /> 
+          {/* pass props to show home vs other pages,
+          or use history to change this */}
         </div>
-        <div className='details-information'>
-          
+        <div className='home-header'>
+          <div className='image-holder'> 
+            <img src={longBGHome} />
+          </div>
+          <div className='home-summary'>
+              <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
+          </div>
         </div>
+        </>
+  
+        <div className='personal-details'>
+          <div className='details-photo'>
+            <img src =''></img>
+          </div>
+          <div className='details-information'>
+            
+          </div>
+        </div>
+        <Highlights />
+        <Footer />
       </div>
-      <div className='portfolio-highlights'>
-        
-      </div>
-      <Footer />
-    </div>
-    )
+      )
+  }
 }
 
 export default Home;
