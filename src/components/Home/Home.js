@@ -24,19 +24,11 @@ class Home extends React.Component {
   render() {
     return(
       <div className='home-container'>
-        <>
-        <div className='home-nav'>
-
-        </div>
         <div className='home-header'>
-          <div className='image-holder'> 
-            <img src={longBGHome} />
-          </div>
           <div className='home-summary'>
               <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
           </div>
         </div>
-        </>
   
         <div className='personal-details'>
           <div className='details-photo'>

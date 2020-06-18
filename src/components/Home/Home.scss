@@ -5,26 +5,35 @@
 .home-container {
     min-height: 100vh;
 
-    .home-nav {
-
-    }
-
     .home-header{
-        min-width: 100vw;
+        margin: 0 auto;
+        width: 70%;
+        height: 600px;
         display: flex;
-
-        .image-holder{
-          width: 49%;
-          img {
-            width: 100%;
-            height: auto;
-          }
-        }
+        align-items: center;
+        background-image: url('../../assets/longbghome.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        // img {
+        //   width: 100%;
+        //   height: auto;
+        // }
 
         .home-summary {
+          width: 40%;
+          height: 50%;
+          margin: 0px 60px;
+          padding: 60px;
           text-align: center;
-          width: 60%;
-          background-color: $primary-color;
+          background-color: $dark-primary;
+
+          h2 {
+            color: $primary-color;
+          }
+
+          h3 {
+            color: $off-white;
+          }
         }
         
     }
