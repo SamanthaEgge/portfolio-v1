@@ -1,6 +1,8 @@
 import React from 'react'
 
+
 const Highlights = (props) => {
+
 
     return (
         <div className='highlights-container'>

@@ -26,9 +26,7 @@ class Home extends React.Component {
       <div className='home-container'>
         <>
         <div className='home-nav'>
-          <Navigation /> 
-          {/* pass props to show home vs other pages,
-          or use history to change this */}
+
         </div>
         <div className='home-header'>
           <div className='image-holder'> 

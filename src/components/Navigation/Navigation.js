@@ -6,12 +6,14 @@ import './Navigation.scss'
 const Navigation = () => {
   return(
     <div className='navigation-container'>
-      <div className='navigation-bar'>
+      <div className='nav-left'>
         <div className='title'><h1>Samantha Egge</h1></div>
+      </div>
+      <div className='nav-right'>
         <div className='nav-items'>
-          <Link className='nav-link' to='/about'> Info</Link> <span>|</span>
-          <Link className='nav-link' to='/blog'>Blog</Link> <span>|</span>
-          <Link className='nav-link' to='/contact' >Contact</Link> <span>|</span>
+          <Link className='nav-link' to='/about'> Info</Link>
+          <Link className='nav-link' to='/blog'>Blog</Link>
+          <Link className='nav-link' to='/contact' >Contact</Link>
         </div>
       </div>
     </div>
