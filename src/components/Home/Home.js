@@ -26,6 +26,7 @@ class Home extends React.Component {
       <div className='home-container'>
         <div className='home-header'>
           <div className='home-summary'>
+              <h2>Hey, I'm Samantha.</h2>
               <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
           </div>
         </div>
@@ -39,7 +40,6 @@ class Home extends React.Component {
           </div>
         </div>
         <Highlights />
-        <Footer />
       </div>
       )
   }
