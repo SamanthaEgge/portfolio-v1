@@ -24,21 +24,12 @@ class Home extends React.Component {
   render() {
     return(
       <div className='home-container'>
-        <>
-        <div className='home-nav'>
-          <Navigation /> 
-          {/* pass props to show home vs other pages,
-          or use history to change this */}
-        </div>
         <div className='home-header'>
-          <div className='image-holder'> 
-            <img src={longBGHome} />
-          </div>
           <div className='home-summary'>
+              <h2>Hey, I'm Samantha.</h2>
               <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
           </div>
         </div>
-        </>
   
         <div className='personal-details'>
           <div className='details-photo'>
@@ -49,7 +40,6 @@ class Home extends React.Component {
           </div>
         </div>
         <Highlights />
-        <Footer />
       </div>
       )
   }
