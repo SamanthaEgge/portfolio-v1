@@ -1,12 +1,13 @@
 import React from 'react'
 
 const HighlightItem = (props) => {
+  console.log(props)
     return (
         <div className='hlitem-container'>
             <div className='hl-image'>
             </div>
             <div className='hl-content'>
-                <h1>{props.feature_title}</h1>
+                <h1>title</h1>
             </div>
         </div>
     )

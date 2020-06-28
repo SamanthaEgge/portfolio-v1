@@ -14,24 +14,26 @@ class Home extends React.Component {
     super(props)
 
     this.state = {
-      error = false,
-      projects = []
+      error: false,
+      projects: []
     }
   }
 
   componentDidMount() {
+    console.log('we mountin')
     axios
-      .get("https://portfolio-v1-be.herokuapp.com/features/featured"
+      .get("https://portfolio-v1-be.herokuapp.com/api/feats/featured")
       .then(events => {
-        this.state.projects = events
+        this.setState({ projects: events })
       })
       .catch(error => {
-        this.state.error = 'Failed to load projects'
+        this.setState({ error: error })
       })
   }
 
 
   render() {
+    console.log('PROJECTS',this.state.projects)
     return(
       <div className='home-container'>
         <div className='home-header'>
@@ -50,11 +52,13 @@ class Home extends React.Component {
           </div>
         </div> */}
         {/* <Highlights /> */}
-        {this.state.higlights.length < 1 ? (
-          <h1>Loading</h1>
-        ) : this.state.highlights.map(project => {
-          <HighlightItem project={project} />
-        })} 
+        {this.state.projects.length < 1 ? (
+            <h1>Loading</h1>
+          ) : (
+            this.state.projects.data.featured.map((project) => {
+            return <HighlightItem {...this.props} project={project} />
+          })
+        )} 
       </div>
       )
   }
