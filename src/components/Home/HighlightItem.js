@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './HighlightItem.scss'
+
+
 
 const HighlightItem = ({project}) => {
   console.log(project)
@@ -16,11 +19,11 @@ const HighlightItem = ({project}) => {
   let inverted = feature.feature_position % 2
 
     return (
-        <div className={`hlitem-container ${inverted == 0 ? "" : "reverse"}`}>
+        <div className={`hlitem-container ${inverted == 1 ? "" : "reverse"}`}>
             <div className='hl-image'>
               <img src={feature.feature_photo} alt={feature.feature_title} />
             </div>
-            <div className='hl-content'>
+            <div className={`hl-content ${inverted == 1 ? "" : "reverse"}`}>
               <span className='hl-title'>{feature.feature_title}</span> <br />
               <span className='hl-skills'>React, Node.js, Express, Redux, Hooks</span>
               <p className='hl-description'>{description}</p>
@@ -29,9 +32,15 @@ const HighlightItem = ({project}) => {
                   return (<><li><span className='bullet'>></span> {bullet}</li></>)
                 })}
               </ul>
+              <div className='hl-links'>
+                {feature.feature_website ? <a href={feature.feature_website}><i class="fas fa-globe"></i></a>: null}
+                {feature.feature_github ? <a href={feature.feature_github}><i class="fab fa-github"></i></a>: null}
+                {feature.blog_slug ? <Link className='' to={`/blog/${feature.blog_slug}`}>link</Link>: null}
+              </div>
             </div>
         </div>
     )
 }
 
 export default HighlightItem
+

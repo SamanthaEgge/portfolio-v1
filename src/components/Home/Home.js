@@ -2,9 +2,6 @@ import React from 'react'
 import axios from 'axios'
 
 import './Home.scss'
-import Navigation from '../Navigation/Navigation'
-import Footer from '../Footer/Footer'
-import Highlights from './Highlights.js'
 import HighlightItem from './HighlightItem.js'
 
 import longBGHome from '../../assets/longbghome.jpg'
