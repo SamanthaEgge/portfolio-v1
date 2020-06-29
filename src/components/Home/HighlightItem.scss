@@ -8,9 +8,12 @@
   margin: 30px auto;
   justify-content: space-between;
   align-items: center;
+  padding-right: 2%;
 
   &.reverse {
-    flex-direction: row-reverse
+    flex-direction: row-reverse;
+    padding-right: 0;
+    padding-left: 2%;
   }
 
   .hl-image {
@@ -21,7 +24,7 @@
   }
 
   .hl-content {
-    width: 48%;
+    width: 46%;
     // padding: 20px;
     
     .hl-title {
