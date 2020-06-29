@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CTAButton = ({ handleClick, size, color, label }) => {
+const Button = ({ handleClick, size, color, label }) => {
     return (
         <div 
             className={`button ${size == 'medium' ? 'medium' : ''} ${color == 'secondary' ? 'secondary' : ''}`}
@@ -10,4 +10,4 @@ const CTAButton = ({ handleClick, size, color, label }) => {
     )
 }
 
-export default CTAButton
+export default Button
