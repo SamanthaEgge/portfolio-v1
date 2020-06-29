@@ -19,12 +19,25 @@ class Home extends React.Component {
     }
   }
 
+  sortPosition(a, b) {
+    const featA = a[0].feature_position;
+    const featB = b[0].feature_position;
+    let comparison = 0;
+    if (featA > featB) {
+      comparison = 1;
+    } else if (featA < featB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
   componentDidMount() {
     console.log('we mountin')
     axios
       .get("https://portfolio-v1-be.herokuapp.com/api/feats/featured")
       .then(events => {
-        this.setState({ projects: events })
+        let sorted = events.data.featured.sort(this.sortPosition)
+        this.setState({ projects: sorted })
       })
       .catch(error => {
         this.setState({ error: error })
@@ -42,21 +55,11 @@ class Home extends React.Component {
               <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
           </div>
         </div>
-  
-        {/* <div className='personal-details'>
-          <div className='details-photo'>
-            <img src =''></img>
-          </div>
-          <div className='details-information'>
-            
-          </div>
-        </div> */}
-        {/* <Highlights /> */}
         {this.state.projects.length < 1 ? (
             <h1>Loading</h1>
           ) : (
-            this.state.projects.data.featured.map((project) => {
-            return <HighlightItem {...this.props} project={project} />
+            this.state.projects.map((project) => {
+            return <HighlightItem project={project} />
           })
         )} 
       </div>

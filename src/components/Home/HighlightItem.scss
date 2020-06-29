@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.hlitem-container {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  border: dashed 1px red;
+  margin: 30px auto;
+  justify-content: space-between;
+  align-items: center;
+
+  &.reverse {
+    flex-direction: row-reverse
+  }
+
+  .hl-image {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .hl-content {
+    width: 48%;
+    // padding: 20px;
+    
+    .hl-title {
+      color: $primary-color;
+      font-size: 32px;
+      font-family: 'Shadows Into Light', cursive;
+
+    }
+    .hl-description {
+      color: $off-white;
+      font-size: 16px;
+      font-family: 'Raleway', sans-serif;
+    }
+    .hl-skills {
+      color: $off-white;
+      font-style: italic;
+      font-family: 'Raleway', sans-serif;
+    }
+    li {
+      color: $off-white;
+      font-size: 16px;
+      font-family: 'Raleway', sans-serif;
+    }
+    .bullet {
+      font-family: 'Permanent Marker', cursive;
+      color: $primary-color;
+      font-size: 24px;
+    }
+  }
+}
