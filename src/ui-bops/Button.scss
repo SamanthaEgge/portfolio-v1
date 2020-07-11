@@ -1,10 +1,10 @@
 @import '../../styles/variables.scss';
 
 .button {
-    background-color: $gray-color;
+    background-color: $off-white;
     width: 80px;
     height: 30px;
-    color: $off-white;
+    color: $dark-primary;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
 
@@ -21,6 +21,7 @@
 
     &.secondary {
         background-color: $primary-darker;
+        color: $off-white;
 
         &:hover {
             background-color: $gray-color;

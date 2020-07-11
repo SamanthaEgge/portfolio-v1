@@ -1,13 +1,16 @@
 @import '../../styles/variables.scss';
 
 .hlitem-container {
+  background-color: #170007;
   display: flex;
   flex-direction: row;
   width: 70%;
-  border: dashed 1px red;
+  // border: dashed 1px red;
   margin: 30px auto;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  border-radius: 10px;
   // padding-right: 2%;
 
   &.reverse {

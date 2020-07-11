@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import './Home.scss'
 import HighlightItem from './HighlightItem.js'
+import CTAButton from '../../ui-bops/CTAButton.js'
 
 import longBGHome from '../../assets/longbghome.jpg'
 
@@ -41,6 +42,9 @@ class Home extends React.Component {
       })
   }
 
+  //     handleClick = (event, destination) = {
+
+  // }
 
   render() {
     console.log('PROJECTS',this.state.projects)
@@ -48,8 +52,11 @@ class Home extends React.Component {
       <div className='home-container'>
         <div className='home-header'>
           <div className='home-summary'>
-              <h2>'Hey, Im Samantha.'</h2>
+              <h2>Hey, Im Samantha.</h2>
               <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
+              <div className='header-buttons'>
+                <CTAButton />
+              </div>
           </div>
         </div>
         {this.state.projects.length < 1 ? (
