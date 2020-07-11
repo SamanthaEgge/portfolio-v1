@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .hlitem-container {
-  background-color: #170007;
+  background-color: $primary-dark-color;
   display: flex;
   flex-direction: row;
   width: 70%;

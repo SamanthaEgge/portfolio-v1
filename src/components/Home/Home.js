@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import Typing from 'react-typing-animation'
 
 import './Home.scss'
 import HighlightItem from './HighlightItem.js'
@@ -52,10 +53,10 @@ class Home extends React.Component {
       <div className='home-container'>
         <div className='home-header'>
           <div className='home-summary'>
-              <h2>Hey, Im Samantha.</h2>
+              <Typing><h2>Hey, I'm Sam</h2></Typing>
               <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
               <div className='header-buttons'>
-                <CTAButton />
+                <CTAButton label={'Contact Me'} size={'large'} color={'primary'} />
               </div>
           </div>
         </div>
