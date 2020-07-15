@@ -6,6 +6,7 @@ const About = (props) => {
 
   return (
     <div className='about-container'>
+      
     </div>
   )
 }
