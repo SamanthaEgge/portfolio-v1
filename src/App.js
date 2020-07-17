@@ -3,12 +3,11 @@ import { Switch, Route } from 'react-router-dom'
 
 import './App.scss'
 import Navigation from './components/Navigation/Navigation'
-import Footer from './components/Footer/Footer'
 
 import Home from './components/Home/Home'
-import About from './components/About/About'
-import Blog from './components/Blog/Blog'
-import Contact from './components/Contact/Contact'
+import About from './views/About'
+import Blog from './views/Blog'
+import Contact from './views/Contact'
 
 const App = () => {
   return (
@@ -22,7 +21,6 @@ const App = () => {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contact" component={Contact} />  
         </Switch>
-      <Footer />
     </div>
   )
 }
