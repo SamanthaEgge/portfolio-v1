@@ -1,30 +1,47 @@
 @import '../../styles/reset.scss';
 @import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
+// @import '../../styles/mixins.scss';
 
 .home-container {
     min-height: 100vh;
 
-    .home-nav {
-
-    }
-
     .home-header{
-        min-width: 100vw;
+        margin: 0 auto;
+        width: 70%;
+        height: 600px;
         display: flex;
-
-        .image-holder{
-          width: 49%;
-          img {
-            width: 100%;
-            height: auto;
-          }
-        }
+        align-items: center;
+        background-image: url('../../assets/longbghome.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        // img {
+        //   width: 100%;
+        //   height: auto;
+        // }
 
         .home-summary {
+          width: 40%;
+          height:30%;
+          margin: 0px 60px;
+          padding: 60px;
           text-align: center;
-          width: 60%;
-          background-color: $primary-color;
+          display: flex;
+          justify-content: space-evenly;
+          flex-direction: column;
+          background-color: #050000E6;
+          border-radius: 10px;
+
+          h2 {
+            color: $primary-color;
+            font-size: 38px;
+            font-family: 'Shadows Into Light', cursive;
+          }
+
+          h3 {
+            color: $off-white;
+            font-size: 18px;
+            font-family: 'Raleway', sans-serif;
+          }
         }
         
     }

@@ -1,45 +1,76 @@
 import React from 'react'
+import axios from 'axios'
+import Typing from 'react-typing-animation'
 
 import './Home.scss'
-import Navigation from '../Navigation/Navigation'
-import Footer from '../Footer/Footer'
+import HighlightItem from './HighlightItem.js'
+import CTAButton from '../../ui-bops/CTAButton.js'
 
 import longBGHome from '../../assets/longbghome.jpg'
 
-const Home = () => {
+class Home extends React.Component {
+  constructor(props) {
+    super(props)
 
-  return(
-    <div className='home-container'>
-      <>
-      <div className='home-nav'>
-        <Navigation /> 
-        {/* pass props to show home vs other pages,
-        or use history to change this */}
-      </div>
-      <div className='home-header'>
-        <div className='image-holder'> 
-          <img src={longBGHome} />
-        </div>
-        <div className='home-summary'>
-            <h3>Full Stack Web Developer looking to design applications to make your job easier</h3>
-        </div>
-      </div>
-      </>
+    this.state = {
+      error: false,
+      projects: []
+    }
+  }
 
-      <div className='personal-details'>
-        <div className='details-photo'>
-          <img src =''></img>
+  sortPosition(a, b) {
+    const featA = a[0].feature_position;
+    const featB = b[0].feature_position;
+    let comparison = 0;
+    if (featA > featB) {
+      comparison = 1;
+    } else if (featA < featB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
+  componentDidMount() {
+    console.log('we mountin')
+    axios
+      .get("https://portfolio-v1-be.herokuapp.com/api/feats/featured")
+      .then(events => {
+        let sorted = events.data.featured.sort(this.sortPosition)
+        this.setState({ projects: sorted })
+      })
+      .catch(error => {
+        this.setState({ error: error })
+      })
+  }
+
+  //     handleClick = (event, destination) = {
+
+  // }
+
+  render() {
+    console.log('PROJECTS',this.state.projects)
+    return(
+      <div className='home-container'>
+        <div className='home-header'>
+          <div className='home-summary'>
+              <Typing.Delay ms={100000} />
+              <Typing speed={80}><h2>Hey, I'm Sam</h2></Typing>
+              <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
+              <div className='header-buttons'>
+                <CTAButton label={'Contact Me'} size={'large'} color={'primary'} />
+              </div>
+          </div>
         </div>
-        <div className='details-information'>
-          
-        </div>
+        {this.state.projects.length < 1 ? (
+            <h1>Loading</h1>
+          ) : (
+            this.state.projects.map((project) => {
+            return <HighlightItem project={project} />
+          })
+        )} 
       </div>
-      <div className='portfolio-highlights'>
-        
-      </div>
-      <Footer />
-    </div>
-    )
+      )
+  }
 }
 
 export default Home;
