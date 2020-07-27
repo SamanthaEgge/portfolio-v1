@@ -12,6 +12,18 @@ class Project extends React.Component {
       }
     }
 
+    sortPosition(a, b) {
+      const featA = a[0].feature_position;
+      const featB = b[0].feature_position;
+      let comparison = 0;
+      if (featA > featB) {
+        comparison = 1;
+      } else if (featA < featB) {
+        comparison = -1;
+      }
+      return comparison;
+    }
+
     componentDidMount() {
         console.log('we mountin')
         axios

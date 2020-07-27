@@ -1,48 +1,67 @@
-@import '../../styles/reset.scss';
-@import '../../styles/variables.scss';
+@import '../styles/reset.scss';
+@import '../styles/variables.scss';
 // @import '../../styles/mixins.scss';
 
 .home-container {
-    min-height: 100vh;
+  min-height: 100vh;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px repeat(6, 1fr) max-content;
 
-    .home-header{
-        margin: 0 auto;
-        width: 70%;
-        height: 600px;
-        display: flex;
-        align-items: center;
-        background-image: url('../../assets/longbghome.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        // img {
-        //   width: 100%;
-        //   height: auto;
-        // }
+  // .home-header{
+  //   margin: 0 auto;
+  //   width: 70%;
+  //   height: 600px;
+  //   display: flex;
+  //   align-items: center;
+  //   background-image: url('../../assets/longbghome.jpg');
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   // img {
+  //   //   width: 100%;
+  //   //   height: auto;
+  //   // }
 
-        .home-summary {
-          width: 40%;
-          height:30%;
-          margin: 0px 60px;
-          padding: 60px;
-          text-align: center;
-          display: flex;
-          justify-content: space-evenly;
-          flex-direction: column;
-          background-color: #050000E6;
-          border-radius: 10px;
+  .navigation {
+    grid-row: 1;
+    grid-column: 1 / 7;
+  }
 
-          h2 {
-            color: $primary-color;
-            font-size: 38px;
-            font-family: 'Shadows Into Light', cursive;
-          }
+  .home-summary {
+    // width: 40%;
+    // height:30%;
+    // margin: 0px 60px;
+    // padding: 60px;
+    // text-align: center;
+    // display: flex;
+    // justify-content: space-evenly;
+    // flex-direction: column;
+    grid-row: 4 / 6;
+    grid-column: 2 / 4;
+    z-index: 1;
+    justify-self: center;
+    background-color: #050000E6;
+    border-radius: 10px;
 
-          h3 {
-            color: $off-white;
-            font-size: 18px;
-            font-family: 'Raleway', sans-serif;
-          }
-        }
-        
+    h2 {
+      color: $primary-color;
+      font-size: 38px;
+      font-family: 'Shadows Into Light', cursive;
     }
+
+    h3 {
+      color: $off-white;
+      font-size: 18px;
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+
+  .home-image {
+    grid-row: 2 / 8;
+    grid-column: 1 / 7;
+    background-image: url('../assets/longbghome.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

@@ -2,22 +2,18 @@
 
 .navigation-container {
   margin: 0 auto;
-  width: 70%;
-  height: 60px;
+  height: 100%;
+  width: 80%;
   background-color: $dark-primary;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(290px, 1fr) repeat(3, 1fr);
   align-items: center;
-  border-top: 2px solid $gray-color;
-  // border-bottom: 2px solid $gray-color;
+
+  // border-top: 2px solid $gray-color;
+  border-bottom: 2px solid $primary-color;
   
   .nav-left {
-    width: 30%;
-    // margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // padding: 20px 0px;
+    grid-column: 1;
 
     .title {
       font-family: 'Permanent Marker', cursive;
@@ -28,13 +24,12 @@
   }
 
   .nav-right {
-    width: 25%;
-    // display: flex;
-    // justify-content: space-between;
+    justify-items: center;
+    grid-column: 3/5;
 
     .nav-items {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
       a {
         padding: 0px 0px 0px 30px;

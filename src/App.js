@@ -2,9 +2,9 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import './App.scss'
-import Navigation from './components/Navigation/Navigation'
+// import Navigation from './components/Navigation/Navigation'
 
-import Home from './components/Home/Home'
+import Home from './views/Home'
 import About from './views/About'
 import Blog from './views/Blog'
 import Contact from './views/Contact'
@@ -12,7 +12,7 @@ import Contact from './views/Contact'
 const App = () => {
   return (
     <div className='portfolio-container'>
-      <Navigation />
+      {/* <Navigation /> */}
       {/* pass props to show home vs other pages,
           or use history to change this */}
         <Switch>

@@ -1,12 +1,9 @@
 import React from 'react'
-import axios from 'axios'
 import Typing from 'react-typing-animation'
 
 import './Home.scss'
-import HighlightItem from './HighlightItem.js'
-import CTAButton from '../../ui-bops/CTAButton.js'
-
-import longBGHome from '../../assets/longbghome.jpg'
+import Navigation from '../components/Navigation/Navigation.js'
+import CTAButton from '../ui-bops/CTAButton.js'
 
 class Home extends React.Component {
   constructor(props) {
@@ -18,39 +15,21 @@ class Home extends React.Component {
     }
   }
 
-  sortPosition(a, b) {
-    const featA = a[0].feature_position;
-    const featB = b[0].feature_position;
-    let comparison = 0;
-    if (featA > featB) {
-      comparison = 1;
-    } else if (featA < featB) {
-      comparison = -1;
-    }
-    return comparison;
-  }
-
-
-
-  //     handleClick = (event, destination) = {
-
-  // }
-
   render() {
-    console.log('PROJECTS',this.state.projects)
     return(
       <div className='home-container'>
-        <div className='home-header'>
-          <div className='home-summary'>
-              <Typing.Delay ms={100000} />
-              <Typing speed={80}><h2>Hey, I'm Sam</h2></Typing>
-              <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
-              <div className='header-buttons'>
-                <CTAButton label={'Contact Me'} size={'large'} color={'primary'} />
-              </div>
-          </div>
+        <div className='navigation'>
+          <Navigation />
         </div>
-        
+        <div className='home-summary'>
+          <Typing.Delay ms={100000} />
+          <Typing speed={80}><h2>Hey, I'm Sam</h2></Typing>
+          <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
+          <div className='header-buttons'>
+            <CTAButton label={'Contact Me'} size={'large'} color={'primary'} />
+          </div>
+         </div>
+        <div className='home-image' />
       </div>
       )
   }
