@@ -1,0 +1,80 @@
+@import '../styles/reset.scss';
+@import '../styles/variables.scss';
+// @import '../../styles/mixins.scss';
+
+.home-container {
+  min-height: 100vh;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px repeat(6, 1fr) max-content;
+
+  // .home-header{
+  //   margin: 0 auto;
+  //   width: 70%;
+  //   height: 600px;
+  //   display: flex;
+  //   align-items: center;
+  //   background-image: url('../../assets/longbghome.jpg');
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   // img {
+  //   //   width: 100%;
+  //   //   height: auto;
+  //   // }
+
+  .navigation {
+    grid-row: 1;
+    grid-column: 1 / 7;
+  }
+
+  .home-summary {
+    // width: 40%;
+    // height:30%;
+    // margin: 0px 60px;
+    // padding: 60px;
+    // text-align: center;
+    // display: flex;
+    // justify-content: space-evenly;
+    // flex-direction: column;
+    padding: 1.5em;
+    grid-row: 4 / 6;
+    grid-column: 2 / 4;
+    z-index: 1;
+    background-color: #050000FA; //98% opacity https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 40px 2fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5em;
+
+    h2 {
+      grid-row: 1;
+      align-self: center;
+      color: $primary-color;
+      text-align: center;
+      font-size: 38px;
+      font-family: 'Shadows Into Light', cursive;
+    }
+
+    h3 {
+      grid-row: 2;
+      align-self: center;
+      color: $off-white;
+      font-size: 18px;
+      font-family: 'Raleway', sans-serif;
+    }
+    .header-buttons {
+      grid-row: 3;
+      align-self: center;
+    }
+  }
+
+  .home-image {
+    grid-row: 2 / 8;
+    grid-column: 1 / 7;
+    background-image: url('../assets/longbghome.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -1,26 +1,30 @@
-@import '../../styles/variables.scss';
+@import '../styles/variables.scss';
 
 .cta-button {
-    background-color: $primary-color;
-    width: 150px;
-    height: 50px;
-    color: $off-white;
-    font-family: 'Shadows Into Light', cursive;
+  background-color: $primary-color;
+  height: 40px;
+  color: $off-white;
+  padding-top: 17px;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: .08em;
+  font-family: 'Shadows Into Light', cursive;
+  border-radius: 10px;
 
-    &:hover {
-        background-color: $secondary-color
-    }
+  &:hover {
+      background-color: $secondary-color
+  }
 
-    &.medium {
-        width: 110px;
-        height: 25px;
-    }
+  &.medium {
+      width: 110px;
+      height: 25px;
+  }
 
-    &.secondary {
-        background-color: $secondary-color;
+  &.secondary {
+      background-color: $secondary-color;
 
-        &:hover {
-            background-color: $primary-color;
-        }
-    }
+      &:hover {
+          background-color: $primary-color;
+      }
+  }
 }
