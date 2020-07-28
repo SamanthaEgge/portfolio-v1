@@ -1,6 +1,9 @@
-import react from 'react'
+import React from 'react'
+import axios from 'axios'
 
-import 'Project.scss'
+import './Project.scss'
+
+import HighlightItem from '../components/Highlight/HighlightItem'
 
 class Project extends React.Component {
     constructor(props) {
@@ -51,3 +54,5 @@ class Project extends React.Component {
         )
     }
 }
+
+export default Project
