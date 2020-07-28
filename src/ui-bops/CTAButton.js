@@ -1,11 +1,12 @@
 import React from 'react'
 
-const CTAButton = ({ handleClick, size, color, label }) => {
+import './CTAButton.scss'
+
+const CTAButton = (props) => {
     return (
         <div 
-            className={`cta-button ${size == 'medium' ? 'medium' : ''} ${color == 'secondary' ? 'secondary' : ''}`}
-            onClick={handleClick}>
-            {label}
+            className={`cta-button ${props.size == 'medium' ? 'medium' : ''} ${props.color == 'secondary' ? 'secondary' : ''}`}>
+            {props.label}
         </div>
     )
 }
