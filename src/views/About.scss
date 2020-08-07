@@ -4,12 +4,17 @@
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 80px 1fr max-content;
 
   .about-header {
     font-size: 32px;
+    font-family: 'Shadows Into Light', cursive;
     color: $primary-color;
+
+  }
+
+  .about-text {
 
   }
 }

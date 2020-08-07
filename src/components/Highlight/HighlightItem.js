@@ -25,9 +25,9 @@ const HighlightItem = ({project}) => {
             </div>
             <div className={`hl-content ${inverted == 1 ? "" : "reverse"}`}>
               <span className='hl-title'>{feature.feature_title}</span> <br />
-              <span className='hl-skills'>{feature.skills.map(skill => {
-                return(<p>{skill}</p>)
-              })}</span>
+              <div className='hl-skills'>{feature.skills.map(skill => {
+                return <div className='skill-box'>{skill}</div>
+              })}</div>
               <p className='hl-description'>{description}</p>
               <ul>
                 {bullets.map(bullet => {

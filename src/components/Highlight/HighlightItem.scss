@@ -57,9 +57,21 @@
     }
     .hl-skills {
       margin-bottom: 6px;
-      color: $off-white;
-      font-style: italic;
-      font-family: 'Raleway', sans-serif;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .skill-box {
+        width: fit-content;
+        padding: 2px 6px;
+        margin: 2px 4px;
+        color: $dark-primary;
+        background-color: $off-white;
+        border-radius: 4px;
+        // font-style: italic;
+        font-family: 'Raleway', sans-serif;
+      }
+
     }
     li {
       color: $off-white;
