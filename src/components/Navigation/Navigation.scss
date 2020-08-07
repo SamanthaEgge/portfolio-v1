@@ -10,7 +10,7 @@
   align-items: center;
 
   // border-top: 2px solid $gray-color;
-  border-bottom: 2px solid $primary-color;
+  // border-bottom: 2px solid $primary-color;
   
   .nav-left {
     grid-column: 1;
@@ -37,7 +37,12 @@
         font-size: 22px;
         text-decoration: none;
         font-family: 'Raleway', sans-serif;
+        
+        &:hover {
+        color: $primary-color;
+        }
       }
+
     }
   }
 }

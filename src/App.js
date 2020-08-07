@@ -5,7 +5,7 @@ import './App.scss'
 // import Navigation from './components/Navigation/Navigation'
 
 import Home from './views/Home'
-import Projects from './views/Project'
+import Project from './views/Project'
 import About from './views/About'
 import Blog from './views/Blog'
 import Contact from './views/Contact'
@@ -18,7 +18,7 @@ const App = () => {
           or use history to change this */}
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path='/projects' component={Projects} />
+          <Route exact path='/projects' component={Project} />
           <Route exact path="/about" component={About} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contact" component={Contact} />  

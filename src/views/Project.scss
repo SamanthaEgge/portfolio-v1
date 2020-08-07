@@ -1,0 +1,18 @@
+.project-container {
+  min-height: 100vh;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80px repeat(2, 1fr) max-content;
+
+
+  .navigation {
+    grid-row: 1;
+    grid-column: 1 / 4;
+  }
+
+  .projects {
+    grid-row: 2 / 4;
+    grid-column: 1 / 3
+  }
+}
