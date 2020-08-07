@@ -1,0 +1,15 @@
+@import '../styles/variables.scss';
+
+.about-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr max-content;
+
+  .about-header {
+    font-size: 32px;
+    color: $primary-color;
+
+  }
+}
