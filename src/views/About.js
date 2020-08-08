@@ -4,24 +4,23 @@ import './About.scss'
 import Navigation from '../components/Navigation/Navigation.js'
 
 const About = () => {
-    return(
-        <div className='about-container'>
-          <Navigation />
-          <h2 className='about-header'>Title</h2>
+  return (
+    <div className='about-container'>
+      <div className='navigation'>
+        <Navigation />
+      </div>
+      
+      <div className='about-photo'>wave</div>
 
-          <div className='about-text'>
-            "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-            <br />
-            "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-            <br />
-            "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-            <br />
-            "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-            <br />
-            "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-          </div>
-        </div>
-    )
+      <div className='about-text'>
+        <h3 className='about-special'>Hey there, I'm Samantha!</h3>
+        <p>I’m a developer proficient with JavaScript, React, React Native, Node.js, PostgreSQL, and Python. I’m also a creative who loves building things, spending time with my dogs, and exploring what the world has to offer. A competitive person by nature, I have a drive to constantly improve and look for how to make a product better whether that’s building race cars or writing code. When I’m not coding I enjoy video games, hiking, reading, and writing.</p>
+        <p>After high school I went straight to college at Oregon State University to study Mechanical Engineering. There I found my first love; race cars. While studying for the next few years, I spent nearly every day in the raceshop designing, building, and racing those cars. I learned what it was like to work with a team who was passionate, driven, and always looking for how we could make the car faster, better, more efficient. It was there I learned to make fleet-footed decisions while navigating reliability versus risk for success, and I loved every minute of it. The pressure of the races and the deadlines were something that I thrived under. Although it wasn’t long before I ran out of money, and I spent the next several years working various jobs to pay off my debt. </p>
+        <p>Once I had paid off my college debts I began looking for what was next that aligned with my interests and passions, that wasn’t through the route of a college education. I eventually found software development, and knew that I had found my calling. After attending 1 year of coding school, building multiple applications, and even leading a couple small teams I’m looking for my next opportunity.</p>
+        <p>My most important value for the teams I work on is the team itself. Working with other passionate people who strive to make the product and each other better. While I’m currently residing in the beautiful Pacific Northwest, I’m looking for a position out East so that I can experience more of what the US has to offer.</p>
+      </div>
+    </div>
+  )
 }
 
 export default About;
