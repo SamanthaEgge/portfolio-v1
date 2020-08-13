@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Typing from 'react-typing-animation'
 
 import './Home.scss'
@@ -26,7 +27,7 @@ class Home extends React.Component {
           <Typing speed={80}><h2>Hey, I'm Sam</h2></Typing>
           <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
           <div className='header-buttons'>
-            <CTAButton label={'Contact Me'} size={'large'} color={'primary'} />
+            <Link to='/about'><CTAButton label={'Contact Me'} size={'large'} color={'primary'} /></Link>
           </div>
          </div>
         <div className='home-image' />

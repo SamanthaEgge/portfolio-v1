@@ -12,9 +12,9 @@ const Navigation = () => {
       <div className='nav-right'>
         <div className='nav-items'>
           <Link className='nav-link' to='/projects'> Projects</Link>
-          <Link className='nav-link' to='/blog'>Blog</Link>
+          {/* <Link className='nav-link' to='/blog'>Blog</Link> */}
           <Link className='nav-link' to='/about'>About</Link>
-          <Link className='nav-link' to='/contact' >Contact</Link>
+          {/* <Link className='nav-link' to='/contact' >Contact</Link> */}
         </div>
       </div>
     </div>
