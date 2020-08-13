@@ -30,10 +30,10 @@
 
     .nav-items {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: flex-end;
 
       a {
-        padding: 0px 0px 0px 30px;
+        padding: 0px 0px 0px 40px;
         color: $off-white;
         font-size: 22px;
         text-decoration: none;
