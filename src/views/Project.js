@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import './Project.scss'
 
+import Navigation from '../components/Navigation/Navigation'
 import HighlightItem from '../components/Highlight/HighlightItem'
 
 class Project extends React.Component {
@@ -42,15 +43,20 @@ class Project extends React.Component {
 
     render () {
         return(
-            <div>
-                {this.state.projects.length < 1 ? (
-            <h1>Loading</h1>
-          ) : (
-            this.state.projects.map((project) => {
-            return <HighlightItem project={project} />
-          })
-        )}  
+          <div className='project-container'>
+            <div className='navigation'>
+              <Navigation />
             </div>
+            <div className='projects'>
+              {this.state.projects.length < 1 ? (
+                <h1>Loading</h1>
+                ) : (
+                this.state.projects.map((project) => {
+                  return <HighlightItem project={project} />
+                })
+              )}
+            </div>
+          </div>
         )
     }
 }

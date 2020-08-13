@@ -7,14 +7,14 @@ const Navigation = () => {
   return(
     <div className='navigation-container'>
       <div className='nav-left'>
-        <div className='title'><h1>Samantha Egge</h1></div>
+        <Link className='title' to='/'><h1>Samantha Egge</h1></Link>
       </div>
       <div className='nav-right'>
         <div className='nav-items'>
           <Link className='nav-link' to='/projects'> Projects</Link>
-          <Link className='nav-link' to='/blog'>Blog</Link>
-          <Link className='nav-link' to='/about'> Info</Link>
-          <Link className='nav-link' to='/contact' >Contact</Link>
+          {/* <Link className='nav-link' to='/blog'>Blog</Link> */}
+          <Link className='nav-link' to='/about'>About</Link>
+          {/* <Link className='nav-link' to='/contact' >Contact</Link> */}
         </div>
       </div>
     </div>

@@ -25,7 +25,9 @@ const HighlightItem = ({project}) => {
             </div>
             <div className={`hl-content ${inverted == 1 ? "" : "reverse"}`}>
               <span className='hl-title'>{feature.feature_title}</span> <br />
-              <span className='hl-skills'>React, Node.js, Express, Redux, Hooks</span>
+              <div className='hl-skills'>{feature.skills.map(skill => {
+                return <div className='skill-box'>{skill}</div>
+              })}</div>
               <p className='hl-description'>{description}</p>
               <ul>
                 {bullets.map(bullet => {
@@ -35,7 +37,7 @@ const HighlightItem = ({project}) => {
               <div className='hl-links'>
                 {feature.feature_website ? <a href={feature.feature_website}><i class="fas fa-globe"></i></a>: null}
                 {feature.feature_github ? <a href={feature.feature_github}><i class="fab fa-github"></i></a>: null}
-                {feature.blog_slug ? <Link className='' to={`/blog/${feature.blog_slug}`}><Button  /></Link>: null}
+                {/* {feature.blog_slug ? <Link className='' to={`/blog/${feature.blog_slug}`}><Button  /></Link>: null} */}
               </div>
             </div>
         </div>
