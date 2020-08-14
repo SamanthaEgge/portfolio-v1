@@ -7,11 +7,11 @@ a {
 }
 
 .home-container {
-  height: 100vh;
+  max-height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 80px repeat(6, 1fr) max-content;
+  grid-template-rows: repeat(6, 1fr);
 
   // .home-header{
   //   margin: 0 auto;
@@ -27,11 +27,6 @@ a {
   //   //   height: auto;
   //   // }
 
-  .navigation {
-    grid-row: 1;
-    grid-column: 1 / 7;
-  }
-
   .home-summary {
     // width: 40%;
     // height:30%;
@@ -42,7 +37,7 @@ a {
     // justify-content: space-evenly;
     // flex-direction: column;
     padding: 1.5em;
-    grid-row: 4 / 6;
+    grid-row: 3 / 5;
     grid-column: 2 / 4;
     z-index: 1;
     background-color: #050000FA; //98% opacity https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
@@ -76,7 +71,7 @@ a {
   }
 
   .home-image {
-    grid-row: 2 / 8;
+    grid-row: 1 / 7;
     grid-column: 1 / 7;
     background-image: url('../assets/longbghome.jpg');
     background-repeat: no-repeat;

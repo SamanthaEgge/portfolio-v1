@@ -2,10 +2,10 @@
 @import './styles/variables.scss';
 
 .portfolio-container {
-  min-height: 100vh;
+  max-height: 100vh;
   background-color: $dark-primary;
   display: grid;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 80px minmax(0, 1fr);
 
   .navigation {
     grid-row: 1;

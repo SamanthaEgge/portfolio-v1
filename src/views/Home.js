@@ -19,9 +19,6 @@ class Home extends React.Component {
   render() {
     return(
       <div className='home-container'>
-        <div className='navigation'>
-          <Navigation />
-        </div>
         <div className='home-summary'>
           <Typing.Delay ms={100000} />
           <Typing speed={80}><h2>Hey, I'm Sam</h2></Typing>

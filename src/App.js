@@ -13,7 +13,7 @@ import Contact from './views/Contact'
 const App = () => {
   return (
     <container className='portfolio-container'>
-      <nav className=''>
+      <nav className='navigation'>
         < Navigation />
       </nav>
       {/* pass props to show home vs other pages,
