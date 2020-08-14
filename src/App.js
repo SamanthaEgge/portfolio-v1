@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import './App.scss'
-// import Navigation from './components/Navigation/Navigation'
+import Navigation from './components/Navigation/Navigation'
 
 import Home from './views/Home'
 import Project from './views/Project'
@@ -12,10 +12,13 @@ import Contact from './views/Contact'
 
 const App = () => {
   return (
-    <div className='portfolio-container'>
-      {/* <Navigation /> */}
+    <container className='portfolio-container'>
+      <nav className=''>
+        < Navigation />
+      </nav>
       {/* pass props to show home vs other pages,
           or use history to change this */}
+      <div className='content'>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path='/projects' component={Project} />
@@ -23,7 +26,8 @@ const App = () => {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contact" component={Contact} />  
         </Switch>
-    </div>
+      </div>
+    </container>
   )
 }
 

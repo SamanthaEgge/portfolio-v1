@@ -4,4 +4,14 @@
 .portfolio-container {
   min-height: 100vh;
   background-color: $dark-primary;
+  display: grid;
+  grid-template-rows: 80px 1fr;
+
+  .navigation {
+    grid-row: 1;
+  }
+
+  .content {
+    grid-row: 2;
+  }
 }
