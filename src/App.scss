@@ -3,6 +3,7 @@
 
 .portfolio-container {
   max-height: 100vh;
+  min-height: 100vh;
   background-color: $dark-primary;
   display: grid;
   grid-template-rows: 80px minmax(0, 1fr);

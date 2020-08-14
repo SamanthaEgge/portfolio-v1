@@ -1,15 +1,10 @@
 import React from 'react'
 
 import './About.scss'
-import Navigation from '../components/Navigation/Navigation.js'
 
 const About = () => {
   return (
     <div className='about-container'>
-      <div className='navigation'>
-        <Navigation />
-      </div>
-      
       <div className='about-photo'>
         <h2>Contact me through any of my social media below,</h2>
         <div className='about-links'>
