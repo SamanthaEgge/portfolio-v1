@@ -35,8 +35,8 @@ const HighlightItem = ({project}) => {
                 })}
               </ul>
               <div className='hl-links'>
-                {feature.feature_website ? <a href={feature.feature_website}><i class="fas fa-globe"></i></a>: null}
-                {feature.feature_github ? <a href={feature.feature_github}><i class="fab fa-github"></i></a>: null}
+                {feature.feature_website ? <a href={feature.feature_website} target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a>: null}
+                {feature.feature_github ? <a href={feature.feature_github} target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>: null}
                 {/* {feature.blog_slug ? <Link className='' to={`/blog/${feature.blog_slug}`}><Button  /></Link>: null} */}
               </div>
             </div>

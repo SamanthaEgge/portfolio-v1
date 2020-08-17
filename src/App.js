@@ -20,11 +20,11 @@ const App = () => {
           or use history to change this */}
       <div className='content'>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path='/' component={Home} />
           <Route exact path='/projects' component={Project} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/blog" component={Blog} />
-          <Route exact path="/contact" component={Contact} />  
+          <Route exact path='/about' component={About} />
+          <Route exact path='/blog' component={Blog} />
+          <Route exact path='/contact' component={Contact} />  
         </Switch>
       </div>
     </container>
