@@ -7,38 +7,17 @@ a {
 }
 
 .home-container {
-  max-height: 100%;
+  height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
 
-  // .home-header{
-  //   margin: 0 auto;
-  //   width: 70%;
-  //   height: 600px;
-  //   display: flex;
-  //   align-items: center;
-  //   background-image: url('../../assets/longbghome.jpg');
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   // img {
-  //   //   width: 100%;
-  //   //   height: auto;
-  //   // }
-
   .home-summary {
-    // width: 40%;
-    // height:30%;
-    // margin: 0px 60px;
-    // padding: 60px;
-    // text-align: center;
-    // display: flex;
-    // justify-content: space-evenly;
-    // flex-direction: column;
     padding: 1.5em;
     grid-row: 3 / 5;
-    grid-column: 2 / 4;
+    grid-column: 4 / 6; // For use in forest picture
+    // grid-column: 2 / 4;  // For use in beach picture
     z-index: 1;
     background-color: #050000FA; //98% opacity https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
     border-radius: 10px;
@@ -73,8 +52,10 @@ a {
   .home-image {
     grid-row: 1 / 7;
     grid-column: 1 / 7;
-    background-image: url('../assets/longbghome.jpg');
+    background-image: url('../assets/homebgforest1.jpg');
+    // background-image: url('../assets/longbghome.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover; // For use in forest picture
   }
 }

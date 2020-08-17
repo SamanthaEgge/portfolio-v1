@@ -16,11 +16,16 @@ class Home extends React.Component {
     }
   }
 
+  componentDidMount () {
+    console.log('we mounting')
+  }
+
   render() {
+    console.log('in render')
     return(
       <div className='home-container'>
         <div className='home-summary'>
-          <Typing.Delay ms={100000} />
+          <Typing.Delay ms={1000} />
           <Typing speed={80}><h2>Hey, I'm Sam</h2></Typing>
           <h3>Creative Full Stack Web Developer looking to stay on the cutting edge of technology and work with a passionate team of engineers.</h3>
           <div className='header-buttons'>
