@@ -1,5 +1,6 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
+import {TransitionGroup, CSSTransition } from 'react-transition-group'
 
 import './App.scss'
 import Navigation from './components/Navigation/Navigation'
@@ -10,23 +11,29 @@ import About from './views/About'
 import Blog from './views/Blog'
 import Contact from './views/Contact'
 
+const AnimatedSwitch = withRouter(({ location }) => (
+  <TransitionGroup>
+    <CSSTransition key={location.key} classNames='slide' timeout={1000}>
+      <Switch location={location}>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/projects' component={Project} />
+        <Route exact path='/about' component={About} />
+        <Route exact path='/blog' component={Blog} />
+        <Route exact path='/contact' component={Contact} />
+      </Switch>
+    </CSSTransition>
+  </TransitionGroup>
+))
+
 const App = () => {
   return (
     <container className='portfolio-container'>
-      <nav className='navigation'>
-        < Navigation />
-      </nav>
-      {/* pass props to show home vs other pages,
-          or use history to change this */}
-      <div className='content'>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/projects' component={Project} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/blog' component={Blog} />
-          <Route exact path='/contact' component={Contact} />  
-        </Switch>
-      </div>
+      <BrowserRouter>
+        <nav className='navigation'>
+          < Navigation />
+        </nav>
+        <AnimatedSwitch />
+      </BrowserRouter>
     </container>
   )
 }
