@@ -24,38 +24,13 @@ const Project = (props) => {
   const projects = useContext(FeaturedContext)
   console.log('CONTEXT-----',projects)
 
-  const [featured, setFeatured] = useState([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
-
-  useEffect(() => {
-    setLoading(true)
-    axios
-      .get(`https://portfolio-v1-be.herokuapp.com/api/feats/featured`)
-      .then(featured => {
-        // console.log(featured)
-        let sorted = featured.data.featured.sort(sortPosition)
-        setFeatured(sorted)
-        setLoading(false)
-        // console.log('we in useEffect')
-      })
-      .catch(error => {
-        setError(true)
-        setLoading(false)
-        // console.log('we in catch')
-        // console.log(error)
-      })
-  }, [])
-
-  console.log(featured)
-  console.log('PROPS.FEATURED', props)
   return (
     <div className='project-container'>
       <div className='projects'>
-        {featured.length < 1 ? (
-          <h1>Loading</h1>
+        {projects === 'loading' || projects === 'initial' ? (
+          <h1 style={{color:'white'}}>Loading</h1>
           ) : (
-          featured.map((project) => {
+          projects.map((project) => {
             return <HighlightItem project={project} />
           })
         )}
