@@ -30,7 +30,7 @@ const AnimatedSwitch = (withRouter(({ location }) => (
 const App = () => {
 
   return (
-    <container className='portfolio-container'>
+    <div className='portfolio-container'>
       <BrowserRouter>
         <FeatureProvider>
           <nav className='navigation'>
@@ -39,7 +39,7 @@ const App = () => {
           <AnimatedSwitch />
         </FeatureProvider>
       </BrowserRouter>
-    </container>
+    </div>
   )
 }
 
