@@ -50,7 +50,8 @@
 
     }
     .hl-description {
-      margin-bottom: 6px;
+      line-height: 1.4em;
+      // margin-bottom: 6px;
       color: $off-white;
       font-size: 16px;
       font-family: 'Raleway', sans-serif;
@@ -73,8 +74,12 @@
       }
 
     }
+    ul {
+      padding: 6px 0px;
+    }
     li {
       color: $off-white;
+      line-height: 1.4em;
       font-size: 16px;
       font-family: 'Raleway', sans-serif;
     }
@@ -87,11 +92,12 @@
     .hl-links {
       margin-top: 15px;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       i {
         text-decoration: none;
         color: $secondary-color;
         font-size: 30px;
+        padding: 0em .7em;
         &:hover {
           color: $off-white;
         }

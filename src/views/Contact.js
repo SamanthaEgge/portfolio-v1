@@ -14,9 +14,9 @@ const Contact = () => {
       <div className='contact-info'>
         <section className='contact-social'>
           <h2>Feel free to reach out through social media, at the links below, </h2>
-          <a href="https://github.com/SamanthaEgge"><i class="fab fa-github"></i></a>
-          <a href="https://twitter.com/SamanthaEgge"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/samantha-egge/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/SamanthaEgge"><i className="fab fa-github"></i></a>
+          <a href="https://twitter.com/SamanthaEgge"><i className="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/samantha-egge/"><i className="fab fa-linkedin"></i></a>
         </section>
         <section className='contact-resume'>
           <h2>or checkout my resume,</h2>

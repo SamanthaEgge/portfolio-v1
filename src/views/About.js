@@ -1,21 +1,16 @@
 import React from 'react'
 
 import './About.scss'
-import Navigation from '../components/Navigation/Navigation.js'
 
 const About = () => {
   return (
     <div className='about-container'>
-      <div className='navigation'>
-        <Navigation />
-      </div>
-      
       <div className='about-photo'>
         <h2>Contact me through any of my social media below,</h2>
         <div className='about-links'>
-          <a href="https://github.com/SamanthaEgge"><i class="fab fa-github"></i></a> &nbsp; &nbsp;
-          <a href="https://twitter.com/SamanthaEgge"><i class="fab fa-twitter"></i></a> &nbsp; &nbsp;
-          <a href="https://www.linkedin.com/in/samantha-egge/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/SamanthaEgge"><i className="fab fa-github"></i></a> &nbsp; &nbsp;
+          <a href="https://twitter.com/SamanthaEgge"><i className="fab fa-twitter"></i></a> &nbsp; &nbsp;
+          <a href="https://www.linkedin.com/in/samantha-egge/"><i className="fab fa-linkedin"></i></a>
         </div>
         <h2>or send me an <a href="mailto:samantha.c.egge@gmail.com">email directly!</a></h2>
       </div>
