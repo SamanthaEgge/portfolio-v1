@@ -6,8 +6,6 @@ import './HighlightItem.scss'
 
 
 const HighlightItem = ({project}) => {
-  console.log(project)
-  // console.log('ID', id)
   let feature = project[0]
 
   // splitting the Json summary into usable pieces for display

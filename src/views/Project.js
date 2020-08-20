@@ -1,60 +1,38 @@
-import React from 'react'
-import axios from 'axios'
+import React, { useContext } from 'react'
+import Loader from 'react-loader-spinner'
 
 import './Project.scss'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import { FeaturedContext } from '../contexts/featured'
 
 import HighlightItem from '../components/Highlight/HighlightItem'
 
-class Project extends React.Component {
-    constructor(props) {
-      super(props)
-  
-      this.state = {
-        error: false,
-        projects: []
-      }
-    }
+const Project = () => {
+  const projects = useContext(FeaturedContext)
 
-    sortPosition(a, b) {
-      const featA = a[0].feature_position;
-      const featB = b[0].feature_position;
-      let comparison = 0;
-      if (featA > featB) {
-        comparison = 1;
-      } else if (featA < featB) {
-        comparison = -1;
-      }
-      return comparison;
-    }
-
-    componentDidMount() {
-        console.log('we mountin')
-        axios
-          .get("https://portfolio-v1-be.herokuapp.com/api/feats/featured")
-          .then(events => {
-            let sorted = events.data.featured.sort(this.sortPosition)
-            this.setState({ projects: sorted })
+  return (
+    <div className='project-container'>
+      <div className='projects'>
+        {projects === 'loading' || projects === 'initial' ? (
+          <Loader
+            type="TailSpin"
+            color="#FFFFFF"
+            height={100}
+            width={100}
+            style={{
+              position: 'absolute',
+              left: '50%',
+              top: '50%'
+            }}
+             />
+          ) : (
+          projects.map((project) => {
+            return <HighlightItem project={project} />
           })
-          .catch(error => {
-            this.setState({ error: error })
-          })
-      }
-
-    render () {
-        return(
-          <div className='project-container'>
-            <div className='projects'>
-              {this.state.projects.length < 1 ? (
-                <h1>Loading</h1>
-                ) : (
-                this.state.projects.map((project) => {
-                  return <HighlightItem project={project} />
-                })
-              )}
-            </div>
-          </div>
-        )
-    }
+        )}
+      </div>
+    </div>
+  )
 }
 
 export default Project

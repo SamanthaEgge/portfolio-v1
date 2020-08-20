@@ -3,8 +3,9 @@ import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
 import {TransitionGroup, CSSTransition } from 'react-transition-group'
 
 import './App.scss'
-import Navigation from './components/Navigation/Navigation'
+import { FeatureProvider } from './contexts/featured'
 
+import Navigation from './components/Navigation/Navigation'
 import Home from './views/Home'
 import Project from './views/Project'
 import About from './views/About'
@@ -12,7 +13,7 @@ import Blog from './views/Blog'
 import Contact from './views/Contact'
 
 // Used for controlling the animation between pages
-const AnimatedSwitch = withRouter(({ location }) => (
+const AnimatedSwitch = (withRouter(({ location }) => (
   <TransitionGroup>
     <CSSTransition key={location.key} classNames='slide' timeout={1000}>
       <Switch location={location}>
@@ -24,19 +25,21 @@ const AnimatedSwitch = withRouter(({ location }) => (
       </Switch>
     </CSSTransition>
   </TransitionGroup>
-))
+)))
 
 const App = () => {
 
   return (
-    <container className='portfolio-container'>
+    <div className='portfolio-container'>
       <BrowserRouter>
-        <nav className='navigation'>
-          < Navigation />
-        </nav>
-        <AnimatedSwitch />
+        <FeatureProvider>
+          <nav className='navigation'>
+              < Navigation />
+          </nav>
+          <AnimatedSwitch />
+        </FeatureProvider>
       </BrowserRouter>
-    </container>
+    </div>
   )
 }
 
