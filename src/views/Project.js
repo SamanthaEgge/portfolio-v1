@@ -1,26 +1,11 @@
-import React, {useState, useEffect, useContext} from 'react'
-import axios from 'axios'
+import React, { useContext } from 'react'
 
 import './Project.scss'
 import { FeaturedContext } from '../contexts/featured'
 
 import HighlightItem from '../components/Highlight/HighlightItem'
 
-
-// Sorts featured projects from backend
-const sortPosition = (a, b) => {
-  const featA = a[0].feature_position
-  const featB = b[0].feature_position
-  let comparison = 0;
-  if (featA > featB) {
-    comparison = 1
-  } else if (featA < featB) {
-    comparison = -1
-  }
-  return comparison
-}
-
-const Project = (props) => {
+const Project = () => {
   const projects = useContext(FeaturedContext)
   console.log('CONTEXT-----',projects)
 

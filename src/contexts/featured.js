@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react'
 import axios from 'axios'
 
+// Used for sorting featured data
 const sortPosition = (a, b) => {
   const featA = a[0].feature_position
   const featB = b[0].feature_position
@@ -29,8 +30,6 @@ export const FeatureProvider = ({ children }) => {
       })
       .catch(error => {
         setFeatured(error)
-        console.log('we in catch')
-        console.log(error)
       })
   }, [])
 

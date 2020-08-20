@@ -27,43 +27,7 @@ const AnimatedSwitch = (withRouter(({ location }) => (
   </TransitionGroup>
 )))
 
-
-// // Sorts featured projects from backend
-// const sortPosition = (a, b) => {
-//   const featA = a[0].feature_position
-//   const featB = b[0].feature_position
-//   let comparison = 0;
-//   if (featA > featB) {
-//     comparison = 1
-//   } else if (featA < featB) {
-//     comparison = -1
-//   }
-//   return comparison
-// }
-
 const App = () => {
-  // const [featured, setFeatured] = useState([])
-  // const [loading, setLoading] = useState(false)
-  // const [error, setError] = useState(false)
-
-  // useEffect(() => {
-  //   setLoading(true)
-  //   axios
-  //     .get(`https://portfolio-v1-be.herokuapp.com/api/feats/featured`)
-  //     .then(featured => {
-  //       console.log('WE IN APP', featured)
-  //       let sorted = featured.data.featured.sort(sortPosition)
-  //       setFeatured(sorted)
-  //       setLoading(false)
-  //       console.log('we in useEffect')
-  //     })
-  //     .catch(error => {
-  //       setError(true)
-  //       setLoading(false)
-  //       console.log('we in catch')
-  //       console.log(error)
-  //     })
-  // }, [])
 
   return (
     <container className='portfolio-container'>
