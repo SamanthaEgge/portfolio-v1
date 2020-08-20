@@ -20,7 +20,6 @@ export const FeatureProvider = ({ children }) => {
   const [featured, setFeatured] = useState('initial')
 
   useEffect(() => {
-    console.log('we in context')
     setFeatured('loading')
     axios
       .get(`https://portfolio-v1-be.herokuapp.com/api/feats/featured`)

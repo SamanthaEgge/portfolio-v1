@@ -7,7 +7,6 @@ import HighlightItem from '../components/Highlight/HighlightItem'
 
 const Project = () => {
   const projects = useContext(FeaturedContext)
-  console.log('CONTEXT-----',projects)
 
   return (
     <div className='project-container'>
