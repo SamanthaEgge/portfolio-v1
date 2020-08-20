@@ -18,7 +18,7 @@
 
   .slide-enter,
   .slide-exit {
-    transition: transform 1000ms ease-out;
+    transition: transform 500ms linear;
   }
 
   .slide-enter {
