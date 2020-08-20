@@ -16,8 +16,8 @@ a {
   .home-summary {
     padding: 1.5em;
     grid-row: 3 / 5;
-    grid-column: 4 / 6; // For use in forest picture
-    // grid-column: 2 / 4;  // For use in beach picture
+    // grid-column: 4 / 6; // For use in forest picture
+    grid-column: 2 / 4;  // For use in beach picture
     z-index: 1;
     background-color: #050000FA; //98% opacity https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
     border-radius: 10px;
@@ -52,10 +52,10 @@ a {
   .home-image {
     grid-row: 1 / 7;
     grid-column: 1 / 7;
-    background-image: url('../assets/homebgforest1.jpg');
-    // background-image: url('../assets/longbghome.jpg');
+    // background-image: url('../assets/homebgforest1.jpg'); // Forest
+    background-image: url('../assets/longbghome.jpg'); // Beach
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; // For use in forest picture
+    // background-size: cover; // For use in forest picture
   }
 }

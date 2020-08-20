@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Typing from 'react-typing-animation'
 
 import './Home.scss'
-import Navigation from '../components/Navigation/Navigation.js'
 import CTAButton from '../ui-bops/CTAButton.js'
 
 class Home extends React.Component {

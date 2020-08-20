@@ -11,6 +11,7 @@ import About from './views/About'
 import Blog from './views/Blog'
 import Contact from './views/Contact'
 
+// Used for controlling the animation between pages
 const AnimatedSwitch = withRouter(({ location }) => (
   <TransitionGroup>
     <CSSTransition key={location.key} classNames='slide' timeout={1000}>
@@ -26,6 +27,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
 ))
 
 const App = () => {
+
   return (
     <container className='portfolio-container'>
       <BrowserRouter>
