@@ -1,7 +1,8 @@
 @import '../../styles/variables.scss';
 
 .hlitem-container {
-  background-color: $primary-dark-color;
+  // background-color: $primary-dark-color; // original
+  background-color: $dark-primary;
   display: flex;
   flex-direction: row;
   width: 100wh;
@@ -45,7 +46,7 @@
     .hl-title {
       color: $primary-color;
       font-size: 32px;
-      font-family: 'Shadows Into Light', cursive;
+      font-family: 'Raleway', sans-serif;
       // margin-bottom: 6px;
 
     }
