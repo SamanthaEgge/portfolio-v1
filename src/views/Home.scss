@@ -26,6 +26,22 @@ a {
     grid-template-columns: 1fr;
     grid-gap: 1.5em;
 
+    @media only screen and (max-width: 1400px) {
+      grid-row: 2 / 5;
+    }
+
+    @media only screen and (max-width: 700px) {
+      grid-row: 2 / 6;
+      grid-column: 2 / 6;
+    }
+
+    @media only screen and (max-width: 380px) {
+      grid-row: 1 / 7;
+      grid-column: 1 / 7;
+      border-radius: 0px;
+      border-top: 1px solid $primary-color;
+    }
+
     h2 {
       grid-row: 1;
       align-self: center;

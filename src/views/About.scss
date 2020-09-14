@@ -7,6 +7,22 @@
   grid-template-columns: 4fr 6fr;
   column-gap: 40px;
 
+  @media only screen and (max-width: 950px) {
+    column-gap: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-color: $dark-primary;
+    padding: 10px;
+  }
+
+  @media only screen and (max-height: 800px) {
+    column-gap: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-color: $dark-primary;
+    padding: 10px;
+  }
+
   h2 {
     padding: 10px 0px;
     color: $primary-color;
@@ -16,11 +32,15 @@
 
   .about-photo {
     grid-column: 1;
-    justify-self: end;
+    justify-self: center;
     align-self: center;
     font-size: 32px;
     font-family: 'Shadows Into Light', cursive;
     color: $primary-color;
+
+    @media only screen and (max-width: 950px) {
+      grid-column: 1 / 3;
+    }
 
     .about-links {
       text-align: center;
@@ -49,6 +69,10 @@
     color: $off-white;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
+
+    @media only screen and (max-width: 950px) {
+      grid-column: 1 / 3;
+    }
 
     p {
       line-height: 1.4em;

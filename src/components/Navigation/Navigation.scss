@@ -12,21 +12,46 @@
   // border-top: 2px solid $gray-color;
   // border-bottom: 2px solid $primary-color;
   
-  .nav-left {
+  .nav-title {
     grid-column: 1;
 
     .title {
       font-family: 'Permanent Marker', cursive;
       color: $primary-color;
-      // padding: 0px 10px;
       font-size: 38px;
       text-decoration: none;
     }
+
+    .title__small {
+      display: none;
+    }
+
+    @media only screen and (max-width: 650px) {
+      .title {
+        display: none;
+      }
+
+      .title__small {
+        font-family: 'Permanent Marker', cursive;
+        color: $primary-color;
+        font-size: 38px;
+        text-decoration: none;
+        display: block;
+      }
+    }
   }
 
-  .nav-right {
+  .nav-links {
     justify-items: center;
     grid-column: 3/5;
+
+    #toggle {
+      display: none;
+    }
+
+    label {
+      display: none;
+    }
 
     .nav-items {
       display: flex;
