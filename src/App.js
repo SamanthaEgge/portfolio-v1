@@ -34,7 +34,7 @@ const App = () => {
       <BrowserRouter>
         <FeatureProvider>
           <nav className='navigation'>
-              < Navigation />
+            <Navigation />
           </nav>
           <AnimatedSwitch />
         </FeatureProvider>

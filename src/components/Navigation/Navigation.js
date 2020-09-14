@@ -6,10 +6,10 @@ import './Navigation.scss'
 const Navigation = () => {
   return(
     <div className='navigation-container'>
-      <div className='nav-left'>
+      <div className='nav-title'>
         <Link className='title' to='/'><h1>Samantha Egge</h1></Link>
       </div>
-      <div className='nav-right'>
+      <div className='nav-links'>
         <div className='nav-items'>
           <Link className='nav-link' to='/projects'> Projects</Link>
           {/* <Link className='nav-link' to='/blog'>Blog</Link> */}

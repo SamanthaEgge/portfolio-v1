@@ -12,7 +12,7 @@
   // border-top: 2px solid $gray-color;
   // border-bottom: 2px solid $primary-color;
   
-  .nav-left {
+  .nav-title {
     grid-column: 1;
 
     .title {
@@ -24,9 +24,17 @@
     }
   }
 
-  .nav-right {
+  .nav-links {
     justify-items: center;
     grid-column: 3/5;
+
+    #toggle {
+      display: none;
+    }
+
+    label {
+      display: none;
+    }
 
     .nav-items {
       display: flex;
