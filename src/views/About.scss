@@ -15,6 +15,14 @@
     padding: 10px;
   }
 
+  @media only screen and (max-height: 800px) {
+    column-gap: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-color: $dark-primary;
+    padding: 10px;
+  }
+
   h2 {
     padding: 10px 0px;
     color: $primary-color;
